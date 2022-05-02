@@ -4,12 +4,13 @@ public class LinearSearch
 {
     public int LinearSearchFunc(int[] list, int target)
     {
-        for (int i=0; i<list.Length; i++)
+        int count = 0;
+        foreach(int x in list)
         {
-            if (list[i] == target)
-            {
-                return i;
-            }
+            if (x == target)
+                return count;
+            else
+                count++;
         }
         return -1;
     }
